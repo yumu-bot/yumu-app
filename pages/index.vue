@@ -4,8 +4,9 @@
 		<!-- 玩家卡片 -->
 		<view class="player-card">
 			<view class="nav-btn">
-				<button>1</button>
-				<button>2</button>
+				<button v-if="currentHomePanel === 'function'" @click="currentHomePanel = 'player'">1</button>
+				<button v-if="currentHomePanel === 'player'" @click="currentHomePanel = 'function'">0</button>
+				<button @click="to">2</button>
 			</view>
 			<image class="avatar" src="/static/image/avatar-guest.png"></image>
 			<text class="player-name">{{ name }}</text>
@@ -20,19 +21,25 @@
 		</view>
 		<!-- 二级页面 -->
 		<view class="second-page">
-			<panelButton></panelButton>
-			<panelButton></panelButton>
-			<panelButton></panelButton>
-			<panelButton></panelButton>
-			<panelButton></panelButton>
+			<!-- 功能面板 -->
+			<FunctionPanel class="panel" v-show="currentHomePanel === 'function'"></FunctionPanel>
+			<!-- 玩家信息面板 -->
+			<PlayerPanel class="panel" v-show="currentHomePanel === 'player'"></PlayerPanel>
 		</view>
 	</view>
 </template>
 
 <script setup>
 import { ref } from 'vue';
-import panelButton from '@/components/button/panelButton';
+import FunctionPanel from './function/index';
+import PlayerPanel from './player/index';
 let name = ref('Player');
+let currentHomePanel = ref('function');
+function to() {
+	uni.navigateTo({
+		url: '/pages/settings',
+	});
+}
 </script>
 
 <style lang="scss" scoped>
@@ -97,7 +104,7 @@ let name = ref('Player');
 			}
 		}
 	}
-	view.second-page {
+	view.second-page .panel {
 		display: flex;
 		flex-wrap: wrap;
 		width: 100%;

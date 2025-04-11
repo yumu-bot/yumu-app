@@ -9,6 +9,7 @@
 		"usingComponents": true,
 		"nvueStyleCompiler": "uni-app",
 		"compilerVersion": 3,
+		"darkmode": true,
 		"splashscreen": {
 			"alwaysShowBeforeRender": true,
 			"waiting": true,
