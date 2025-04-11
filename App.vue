@@ -13,10 +13,5 @@ export default {
 </script>
 
 <style lang="scss">
-/*每个页面公共css */
-body {
-	padding: 20rpx 10rpx 10rpx 10rpx;
-	box-sizing: border-box;
-	background-color: #e5f6ff;
-}
+@import url('~@/static/css/main.css'); //全局样式
 </style>
