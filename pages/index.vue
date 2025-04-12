@@ -139,8 +139,9 @@ function to() {
 		flex-wrap: wrap;
 		width: 100%;
 		position: relative;
-		row-gap: 15rpx;
-		column-gap: 10rpx;
+		// 减少gap样式的使用以兼容旧安卓环境
+		// row-gap: 15rpx;
+		// column-gap: 10rpx;
 	}
 }
 </style>

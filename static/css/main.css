@@ -7,6 +7,11 @@ page {
 	background-color: #e5f6ff;
 }
 
+html {
+	font-family: Torus-SemiBold, sans-serif;
+}
+
+
 * {
 	box-sizing: border-box;
 }
