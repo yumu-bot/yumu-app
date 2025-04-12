@@ -33,7 +33,7 @@
 import { ref } from 'vue';
 import FunctionPanel from './function/index';
 import PlayerPanel from './player/index';
-let name = ref('Player'); // 玩家名
+let name = ref('Muziyami'); // 玩家名
 let currentHomePanel = ref('function'); // 当前主页面板(功能/玩家)
 let cardBg = ref('./static/image/object-score-backimage-B.jpg'); // 玩家卡片背景图片
 // 页面跳转
@@ -57,7 +57,7 @@ function to() {
 		background-repeat: no-repeat;
 		background-position: center;
 		border-radius: 20rpx;
-		box-shadow: 10rpx 10rpx 20rpx 20rpx rgba(0 0 0 / 0.2);
+		box-shadow: 5rpx 5rpx 5rpx 5rpx rgba(0, 0, 0, 0.2);
 		margin: 15rpx 0;
 		padding: 20rpx;
 		row-gap: 20rpx;
@@ -95,10 +95,14 @@ function to() {
 			}
 		}
 		.avatar {
-			height: 200rpx;
-			width: 200rpx;
+			height: 140rpx;
+			width: 140rpx;
 			border-radius: 20rpx;
 		}
+    .player-name {
+      font-size: 40rpx !important;
+      font-family: Torus-Bold, serif !important;
+    }
 		.player-name + view {
 			width: 100%;
 			position: relative;

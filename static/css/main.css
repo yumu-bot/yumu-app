@@ -1,8 +1,8 @@
 @import url('./Torus-Semibold.css');
 @import url('./Torus-Bold.css');
 
-* {
-	font-family: Torus-SemiBold;
+body {
+	font-family: Torus-SemiBold, serif;
 }
 
 body {

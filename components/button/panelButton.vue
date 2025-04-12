@@ -23,7 +23,7 @@ const props = defineProps({
 <style lang="scss" scoped>
 .panel {
 	width: calc(50% - 5rpx);
-	box-shadow: 10rpx 10rpx 10rpx 10rpx rgba(0 0 0 / 0.2);
+	box-shadow: 5rpx 5rpx 5rpx 5rpx rgba(0, 0, 0, 0.2);
 	border-radius: 20rpx;
 	text-align: center;
 	position: relative;
@@ -52,7 +52,7 @@ const props = defineProps({
 		flex-direction: column;
 		padding: 10rpx 0;
 		text:first-child {
-			font-size: 40rpx;
+			font-size: 30rpx;
 			font-weight: bold;
 		}
 		text:last-child {
