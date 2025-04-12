@@ -2,18 +2,18 @@
 	<!-- App主页 -->
 	<view class="page">
 		<!-- 玩家卡片 -->
-		<view class="player-card">
+		<view class="player-card" :style="`background-image:url(${cardBg})`">
 			<view class="nav-btn">
-				<button v-if="currentHomePanel === 'function'" @click="currentHomePanel = 'player'">1</button>
-				<button v-if="currentHomePanel === 'player'" @click="currentHomePanel = 'function'">0</button>
-				<button @click="to">2</button>
+				<button class="player-menu" v-if="currentHomePanel === 'function'" @click="currentHomePanel = 'player'"></button>
+				<button class="player-menu" v-if="currentHomePanel === 'player'" @click="currentHomePanel = 'function'"></button>
+				<button class="settings" @click="to"></button>
 			</view>
 			<image class="avatar" src="/static/image/avatar-guest.png"></image>
 			<text class="player-name">{{ name }}</text>
 			<view>
 				<text class="game-mode">osu!standard</text>
 				<view class="pp">
-					<text>1611</text>
+					<text>13729</text>
 					<text>{{ ' PP ' }}</text>
 				</view>
 				<text class="ranking">CN #1474</text>
@@ -33,8 +33,10 @@
 import { ref } from 'vue';
 import FunctionPanel from './function/index';
 import PlayerPanel from './player/index';
-let name = ref('Player');
-let currentHomePanel = ref('function');
+let name = ref('Player'); // 玩家名
+let currentHomePanel = ref('function'); // 当前主页面板(功能/玩家)
+let cardBg = ref('./static/image/object-score-backimage-B.jpg'); // 玩家卡片背景图片
+// 页面跳转
 function to() {
 	uni.navigateTo({
 		url: '/pages/settings',
@@ -50,7 +52,10 @@ function to() {
 		flex-direction: column;
 		align-items: center;
 		justify-content: center;
-		background-color: #002295;
+		// background-color: #002295;
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: center;
 		border-radius: 20rpx;
 		box-shadow: 10rpx 10rpx 20rpx 20rpx rgba(0 0 0 / 0.2);
 		margin: 15rpx 0;
@@ -72,6 +77,21 @@ function to() {
 				height: 40rpx;
 				padding: 0;
 				line-height: unset;
+				background-color: transparent;
+				background-size: contain;
+				background-repeat: no-repeat;
+				opacity: 1;
+				border-radius: 0;
+				&:after {
+					border: none;
+					border-radius: 0;
+				}
+				&.player-menu {
+					background-image: url(./static/image/svg/bars-solid.svg);
+				}
+				&.settings {
+					background-image: url(./static/image/svg/gear-solid.svg);
+				}
 			}
 		}
 		.avatar {
@@ -109,8 +129,8 @@ function to() {
 		flex-wrap: wrap;
 		width: 100%;
 		position: relative;
-		row-gap: 15px;
-		column-gap: 10px;
+		row-gap: 15rpx;
+		column-gap: 10rpx;
 	}
 }
 </style>
