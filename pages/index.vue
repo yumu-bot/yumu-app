@@ -51,8 +51,10 @@ function to() {
 		position: relative;
 		flex-direction: column;
 		align-items: center;
-		justify-content: center;
+		justify-content: space-between;
 		// background-color: #002295;
+		height: 300rpx;
+		max-height: 300rpx;
 		background-size: cover;
 		background-repeat: no-repeat;
 		background-position: center;
@@ -60,7 +62,7 @@ function to() {
 		box-shadow: 5rpx 5rpx 5rpx 5rpx rgba(0, 0, 0, 0.2);
 		margin: 15rpx 0;
 		padding: 20rpx;
-		row-gap: 20rpx;
+		// row-gap: 20rpx;
 		font-size: 40rpx;
 		color: #fff;
 		.nav-btn {
@@ -95,25 +97,29 @@ function to() {
 			}
 		}
 		.avatar {
-			height: 140rpx;
-			width: 140rpx;
+			max-width: 140rpx !important;
+			max-height: 140rpx !important;
 			border-radius: 20rpx;
 		}
-    .player-name {
-      font-size: 40rpx !important;
-      font-family: Torus-Bold, serif !important;
-    }
+		.player-name {
+			font-size: 40rpx !important;
+			font-family: Torus-Bold, serif !important;
+			max-height: 44rpx;
+		}
 		.player-name + view {
 			width: 100%;
+			max-height: 60rpx;
 			position: relative;
 			display: flex;
 			justify-content: space-between;
-			align-items: baseline;
+			align-items: flex-end;
 			text-align: center;
 			.game-mode {
 				font-size: 18rpx !important;
 			}
 			view.pp {
+				position: relative;
+				bottom: -10rpx;
 				text:nth-child(1) {
 					font-size: 60rpx !important;
 					font-family: Torus-Bold, serif !important;

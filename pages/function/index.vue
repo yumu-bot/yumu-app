@@ -28,24 +28,24 @@ const functionList = ref([
 		icon: '/static/image/svg/map-location-dot-solid.svg',
 		iconBgStyle: 'background: linear-gradient(150deg, #feda47, #fb7298)',
 	},
-  {
-    name: '分析最好成绩',
-    note: 'Best Performance Analysis v3',
-    icon: '/static/image/svg/flask-vial-solid.svg',
-    iconBgStyle: 'background: linear-gradient(150deg, #FDE997, #E355DF)',
-  },
-  {
-    name: '查询排行榜',
-    note: 'Get Leaderboard',
-    icon: '/static/image/svg/list-ol-solid.svg',
-    iconBgStyle: 'background: linear-gradient(150deg, #2871FA, #671ACE)',
-  },
-  {
-    name: '搜索谱面',
-    note: 'Search Beatmap',
-    icon: '/static/image/svg/magnifying-glass.svg',
-    iconBgStyle: 'background: linear-gradient(150deg, #39F7CD, #43EA80)',
-  },
+	{
+		name: '分析最好成绩',
+		note: 'Best Performance Analysis v3',
+		icon: '/static/image/svg/flask-vial-solid.svg',
+		iconBgStyle: 'background: linear-gradient(150deg, #FDE997, #E355DF)',
+	},
+	{
+		name: '查询排行榜',
+		note: 'Get Leaderboard',
+		icon: '/static/image/svg/list-ol-solid.svg',
+		iconBgStyle: 'background: linear-gradient(150deg, #2871FA, #671ACE)',
+	},
+	{
+		name: '搜索谱面',
+		note: 'Search Beatmap',
+		icon: '/static/image/svg/magnifying-glass.svg',
+		iconBgStyle: 'background: linear-gradient(150deg, #39F7CD, #43EA80)',
+	},
 ]);
 </script>
 

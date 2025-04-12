@@ -23,7 +23,8 @@ const props = defineProps({
 <style lang="scss" scoped>
 .panel {
 	width: calc(50% - 5rpx);
-  height: 220rpx;
+	height: 220rpx;
+	max-height: 220rpx;
 	box-shadow: 5rpx 5rpx 5rpx 5rpx rgba(0, 0, 0, 0.2);
 	border-radius: 20rpx;
 	text-align: center;
@@ -31,7 +32,7 @@ const props = defineProps({
 	padding: 0;
 	line-height: unset;
 	margin: 0;
-	box-sizing: content-box;
+	box-sizing: border-box;
 	overflow: visible;
 	&::after {
 		border: 0;
@@ -51,7 +52,8 @@ const props = defineProps({
 		// height: 40%;
 		display: flex;
 		flex-direction: column;
-		padding: 10rpx 0;
+		padding: 0rpx 0;
+		box-sizing: border-box;
 		text:first-child {
 			font-size: 30rpx;
 			font-weight: bold;

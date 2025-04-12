@@ -1,12 +1,12 @@
 @import url('./Torus-Semibold.css');
 @import url('./Torus-Bold.css');
 
-body {
+page {
 	font-family: Torus-SemiBold, sans-serif;
+	padding: 20rpx 10rpx 10rpx 10rpx;
+	background-color: #e5f6ff;
 }
 
-body {
-	padding: 20rpx 10rpx 10rpx 10rpx;
+* {
 	box-sizing: border-box;
-	background-color: #e5f6ff;
 }
