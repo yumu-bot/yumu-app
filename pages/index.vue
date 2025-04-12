@@ -92,11 +92,11 @@ function to() {
 			view.pp {
 				text:nth-child(1) {
 					font-size: 60rpx !important;
-					font-family: Torus-Bold !important;
+					font-family: Torus-Bold, serif !important;
 				}
 				text:nth-child(2) {
 					font-size: 40rpx !important;
-					font-family: Torus-Bold !important;
+					font-family: Torus-Bold, serif !important;
 				}
 			}
 			.ranking {
