@@ -23,6 +23,7 @@ const props = defineProps({
 <style lang="scss" scoped>
 .panel {
 	width: calc(50% - 5rpx);
+  height: 220rpx;
 	box-shadow: 5rpx 5rpx 5rpx 5rpx rgba(0, 0, 0, 0.2);
 	border-radius: 20rpx;
 	text-align: center;
